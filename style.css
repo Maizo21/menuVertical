@@ -1,0 +1,99 @@
+body {
+  background-color: #313131;
+  height: 100vw;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.menu-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  left: 8%;
+  transition: 0.5s;
+}
+
+.menu-icon img {
+  filter: invert(1);
+}
+
+.active {
+  transform: rotate(90deg);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  background-color: rgb(41, 34, 145);
+  position: fixed;
+  bottom: 0;
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  top: 0;
+  transition: 0.5s;
+  left: -20%;
+  padding: 0;
+  width: 100px;
+  justify-content: flex-start;
+  align-items: center;
+  border-right: 5px solid transparent;
+}
+
+ul li {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  transition: 0.3s;
+}
+
+ul :first-child {
+  margin-top: 30px;
+}
+
+ul li:hover {
+  padding: 20px 0;
+  background-color: white;
+  border-radius: 50px 0px 0px 50px;
+  color: black;
+}
+
+ul li:hover > a {
+  padding: 20px 0;
+  background-color: white;
+  border-radius: 50px 0px 0px 50px;
+  color: black;
+}
+
+ul li a:hover {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.show {
+  left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 480px) {
+  ul {
+    left: -30%;
+  }
+
+  .menu-icon {
+    left: 5%;
+    top: 2%;
+    z-index: 4;
+  }
+}
