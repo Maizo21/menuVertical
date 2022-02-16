@@ -38,7 +38,10 @@ document.addEventListener("keydown", function (e) {
 });
 
 document.addEventListener("click", function (e) {
-  if (e.target == document.querySelector("body")) {
+  if (
+    e.target == document.querySelector("body") &&
+    document.querySelector(".menu").classList.contains("show")
+  ) {
     viewMenu();
   }
 });
